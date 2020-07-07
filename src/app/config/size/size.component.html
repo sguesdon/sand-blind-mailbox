@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center">
+        {{ 'PAGES.CONFIG.SIZE.TITLE' | translate }}
+      </h1>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col-md-2">
+      <button class="btn btn-primary" (click)="size=size-1" [disabled]="size<=0">
+        <i class="fa fa-minus"></i>
+      </button>
+    </div>
+    <div class="col-md-8 size-{{size}}">
+      {{ 'PAGES.CONFIG.SIZE.SIZE' | translate }} {{size + 1}}
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-primary" (click)="size=size+1" [disabled]="size>=49">
+        <i class="fa fa-plus"></i>
+      </button>
+    </div>
+  <div class="row">
+</div>

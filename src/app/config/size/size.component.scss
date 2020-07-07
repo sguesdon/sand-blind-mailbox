@@ -1,0 +1,12 @@
+$sizes: 50;
+$padding: 0.25;
+
+@for $i from 0 through $sizes {
+    .size-#{$i} {
+      font-size:(1rem + ($padding * $i));
+    }
+}
+
+.fa {
+  font-size:7rem;
+}

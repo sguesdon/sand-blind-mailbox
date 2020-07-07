@@ -1,7 +1,10 @@
 <div class="container">
-  <h1 class="title">
-    {{ 'PAGES.HOME.TITLE' | translate }}
-  </h1>
+  <div class="col-md-12">
+    <h1 class="title">
+      {{ 'PAGES.HOME.TITLE' | translate }}
+    </h1>
+    <a routerLink="/config/size">config size</a>
+    <a routerLink="/detail">{{ 'PAGES.HOME.GO_TO_DETAIL' | translate }}</a>
+  </div>
 
-  <a routerLink="/detail">{{ 'PAGES.HOME.GO_TO_DETAIL' | translate }}</a>
 </div>

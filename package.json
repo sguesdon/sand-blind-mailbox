@@ -92,5 +92,11 @@
   },
   "engines": {
     "node": ">=10.13.0"
+  },
+  "dependencies": {
+    "@forevolve/bootstrap-dark": "1.0.0-alpha.1089",
+    "bootstrap": "4.5.0",
+    "font-awesome": "4.7.0",
+    "nedb": "1.8.0"
   }
 }
