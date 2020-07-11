@@ -54,6 +54,7 @@
     "@angular/platform-browser": "9.1.11",
     "@angular/platform-browser-dynamic": "9.1.11",
     "@angular/router": "9.1.11",
+    "@forevolve/bootstrap-dark": "1.0.0-alpha.1089",
     "@ngx-translate/core": "12.1.2",
     "@ngx-translate/http-loader": "5.0.0",
     "@types/jasmine": "3.5.10",
@@ -63,6 +64,7 @@
     "@typescript-eslint/eslint-plugin": "3.3.0",
     "@typescript-eslint/eslint-plugin-tslint": "3.3.0",
     "@typescript-eslint/parser": "3.3.0",
+    "bootstrap": "4.5.0",
     "chai": "4.2.0",
     "conventional-changelog-cli": "2.0.34",
     "core-js": "3.6.5",
@@ -72,6 +74,7 @@
     "electron-reload": "1.5.0",
     "eslint": "7.3.0",
     "eslint-plugin-import": "2.21.2",
+    "font-awesome": "4.7.0",
     "jasmine-core": "3.5.0",
     "jasmine-spec-reporter": "5.0.2",
     "karma": "5.1.0",
@@ -94,9 +97,8 @@
     "node": ">=10.13.0"
   },
   "dependencies": {
-    "@forevolve/bootstrap-dark": "1.0.0-alpha.1089",
-    "bootstrap": "4.5.0",
-    "font-awesome": "4.7.0",
-    "nedb": "1.8.0"
+    "electron-store": "5.2.0",
+    "emailjs-imap-client": "3.1.0",
+    "imap": "0.8.19"
   }
 }

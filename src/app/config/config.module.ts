@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 
 import { ConfigRoutingModule } from './config-routing.module';
 
+import { ConfigComponent } from './config.component';
 import { SizeComponent } from './size/size.component';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [SizeComponent],
+  declarations: [ConfigComponent, SizeComponent],
   imports: [CommonModule, SharedModule, ConfigRoutingModule]
 })
 export class ConfigModule {}

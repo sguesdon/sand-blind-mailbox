@@ -5,12 +5,17 @@ import { PageNotFoundComponent } from './shared/components';
 import { HomeRoutingModule } from './home/home-routing.module';
 import { DetailRoutingModule } from './detail/detail-routing.module';
 import { ConfigRoutingModule } from './config/config-routing.module';
+import { InboxRoutingModule } from './inbox/inbox-routing.module';
 
 const routes: Routes = [
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: {
+      title: 'PAGES.HOME.TITLE',
+      backState: false
+    }
   },
   {
     path: '**',
@@ -23,7 +28,8 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     HomeRoutingModule,
     DetailRoutingModule,
-    ConfigRoutingModule
+    ConfigRoutingModule,
+    InboxRoutingModule
   ],
   exports: [RouterModule]
 })

@@ -1,12 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
+
+import { ConfigComponent } from './config.component';
 import { SizeComponent } from './size/size.component';
 
 const routes: Routes = [
   {
+    path: 'config',
+    component: ConfigComponent,
+    data: {
+      title: 'PAGES.CONFIG.TITLE'
+    }
+  },
+  {
     path: 'config/size',
-    component: SizeComponent
+    component: SizeComponent,
+    data: {
+      title: 'PAGES.CONFIG.SIZE.TITLE',
+      backState: 'config'
+    }
   }
 ];
 

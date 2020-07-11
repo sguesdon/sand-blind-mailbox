@@ -1,5 +1,11 @@
 {
+  "CONTROLS": {
+    "BACK": "BACK"
+  },
   "PAGES": {
+
+
+
     "HOME": {
       "TITLE": "App works !",
       "GO_TO_DETAIL": "Go to Detail"
@@ -9,9 +15,20 @@
       "BACK_TO_HOME": "Back to Home"
     },
     "CONFIG": {
+
+      "TITLE": "Settings",
+
       "SIZE": {
-        "TITLE": "Size config",
+        "TITLE": "Char Size",
         "SIZE": "Size"
+      },
+
+      "IMAP": {
+        "TITLE": "Imap"
+      },
+
+      "COLORS": {
+        "TITLE": "Colors"
       }
     }
   }

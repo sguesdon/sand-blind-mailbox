@@ -1,3 +1,14 @@
-:host {
-  
+@import "~variables.scss";
+
+@for $i from 0 through $sizes {
+    .size-#{$i} {
+      font-size:(1rem + ($padding-size * $i));
+      .btn {
+        font-size:(1rem + ($padding-size * $i));
+      }
+    }
+}
+
+.container-fluid.menu {
+  border-bottom: 1px solid $border-color;
 }

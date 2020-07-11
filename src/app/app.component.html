@@ -1,1 +1,14 @@
-<router-outlet></router-outlet>
+<div class="size-{{size}}">
+  <div class="container-fluid menu">
+    <div class="row">
+      <div class="col-md-3">
+        <button *ngIf="backState !== false" [routerLink]="backState" class="btn btn-primary">
+          {{'CONTROLS.BACK' | translate}}
+        </button>
+      </div>
+      <div class="col-md-6 text-center">{{title|translate}}</div>
+      <div class="col-md-3 text-right"></div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

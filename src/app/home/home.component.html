@@ -1,10 +1,6 @@
-<div class="container">
-  <div class="col-md-12">
-    <h1 class="title">
-      {{ 'PAGES.HOME.TITLE' | translate }}
-    </h1>
-    <a routerLink="/config/size">config size</a>
-    <a routerLink="/detail">{{ 'PAGES.HOME.GO_TO_DETAIL' | translate }}</a>
+<div class="container-fluid">
+  <div class="row text-center">
+    <div routerLink="/config" class="col-md-12">{{'PAGES.CONFIG.TITLE'|translate}}</div>
+    <div routerLink="/inbox" class="col-md-12">{{'PAGES.EMAILS.TITLE'|translate}}</div>
   </div>
-
 </div>
