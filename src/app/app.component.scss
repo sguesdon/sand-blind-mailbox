@@ -3,7 +3,7 @@
 @for $i from 0 through $sizes {
     .size-#{$i} {
       font-size:(1rem + ($padding-size * $i));
-      .btn {
+      .btn, .form-control {
         font-size:(1rem + ($padding-size * $i));
       }
     }

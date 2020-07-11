@@ -6,7 +6,10 @@ import { ListComponent } from './list/list.component';
 const routes: Routes = [
   {
     path: 'inbox',
-    component: ListComponent
+    component: ListComponent,
+    data: {
+      title: 'PAGES.EMAILS.TITLE'
+    }
   }
 ];
 

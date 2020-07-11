@@ -1,0 +1,71 @@
+<div class="container-fluid">
+  <form [formGroup]="checkoutForm" novalidate class="row">
+      <div class="form-group col-md-12">
+        <label>{{'PAGES.CONFIG.MAIL.FORM.HOST.FIELDNAME'|translate}}</label>
+        <input
+          type="text"
+          formControlName="host"
+          class="form-control"
+          placeholder="{{'PAGES.CONFIG.MAIL.FORM.HOST.PLACEHOLDER'|translate}}"
+          [ngClass]="{ 'is-invalid': submitted && f.host.errors }"
+        />
+        <div *ngIf="submitted && f.host.errors" class="invalid-feedback">
+          <div *ngIf="f.host.errors.required">
+            {{'PAGES.CONFIG.MAIL.FORM.HOST.FIELDNAME'|translate}} {{'FORM.REQUIRED'|translate}}
+          </div>
+        </div>
+      </div>
+      <div class="form-group col-md-12">
+        <label>{{'PAGES.CONFIG.MAIL.FORM.PORT.FIELDNAME'|translate}}</label>
+        <input
+          type="text"
+          formControlName="port"
+          class="form-control"
+          placeholder="{{'PAGES.CONFIG.MAIL.FORM.PORT.PLACEHOLDER'|translate}}"
+          [ngClass]="{ 'is-invalid': submitted && f.port.errors }"
+        />
+        <div *ngIf="submitted && f.port.errors" class="invalid-feedback">
+          <div *ngIf="f.port.errors.required">
+            {{'PAGES.CONFIG.MAIL.FORM.PORT.FIELDNAME'|translate}} {{'FORM.REQUIRED'|translate}}
+          </div>
+        </div>
+      </div>
+      <div class="form-group col-md-12">
+        <label>{{'PAGES.CONFIG.MAIL.FORM.USER.FIELDNAME'|translate}}</label>
+        <input
+          type="text"
+          formControlName="user"
+          class="form-control"
+          placeholder="{{'PAGES.CONFIG.MAIL.FORM.USER.PLACEHOLDER'|translate}}"
+          [ngClass]="{ 'is-invalid': submitted && f.user.errors }"
+        />
+        <div *ngIf="submitted && f.user.errors" class="invalid-feedback">
+          <div *ngIf="f.user.errors.required">
+            {{'PAGES.CONFIG.MAIL.FORM.USER.FIELDNAME'|translate}} {{'FORM.REQUIRED'|translate}}
+          </div>
+        </div>
+      </div>
+      <div class="form-group col-md-12">
+        <label for="inputState">{{'PAGES.CONFIG.MAIL.FORM.TLS.FIELDNAME'|translate}}</label>
+        <select id="inputState" class="form-control" formControlName="tls" placeholder="{{'PAGES.CONFIG.MAIL.FORM.TLS.PLACEHOLDER'|translate}}">
+          <option selected value="true">{{'FORM.YES'|translate}}</option>
+          <option value="false">{{'FORM.NO'|translate}}</option>
+        </select>
+      </div>
+      <div class="form-group col-md-12">
+        <label>{{'PAGES.CONFIG.MAIL.FORM.PASSWORD.FIELDNAME'|translate}}</label>
+        <input
+          type="password"
+          formControlName="password"
+          class="form-control"
+          placeholder="{{'PAGES.CONFIG.MAIL.FORM.PASSWORD.PLACEHOLDER'|translate}}"
+          [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+        />
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+          <div *ngIf="f.password.errors.required">
+            {{'PAGES.CONFIG.MAIL.FORM.PASSWORD.FIELDNAME'|translate}} {{'FORM.REQUIRED'|translate}}
+          </div>
+        </div>
+      </div>
+  </form>
+</div>

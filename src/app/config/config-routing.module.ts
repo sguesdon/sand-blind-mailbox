@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ConfigComponent } from './config.component';
 import { SizeComponent } from './size/size.component';
+import { MailBoxComponent } from './mailbox/mailbox.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,14 @@ const routes: Routes = [
     component: SizeComponent,
     data: {
       title: 'PAGES.CONFIG.SIZE.TITLE',
+      backState: 'config'
+    }
+  },
+  {
+    path: 'config/mail',
+    component: MailBoxComponent,
+    data: {
+      title: 'PAGES.CONFIG.MAIL.TITLE',
       backState: 'config'
     }
   }

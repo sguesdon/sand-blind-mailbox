@@ -3,8 +3,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-var Imap = require('imap'),
-inspect = require('util').inspect;
+import { ElectronService } from '../../core/services';
+
+const Imap = require('imap');
+
 
 @Component({
   selector: 'inbox-list',
@@ -14,30 +16,32 @@ inspect = require('util').inspect;
 export class ListComponent implements OnInit {
 
   private imap;
+  private config;
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private electronService: ElectronService
+  ) {
+    this.config = this.electronService.config;
+  }
 
   async connect(): Promise<any> {
 
     return new Promise(async (resolve, reject) => {
-
-      this.imap = new Imap({
-        user: 'toto',
-        password: 'toto',
-        host: 'imap.gmail.com',
-        port: 993,
-        tls: true,
-        tlsOptions: { servername: 'imap.gmail.com' }
-      });
-
-
+      const imapConfig: any = this.config.get('config.mail');
+      if(imapConfig.tls) {
+        imapConfig.tlsOptions = {
+          servername: imapConfig.host
+        };
+      }
+      console.log(imapConfig);
+      this.imap = new Imap(imapConfig);
       this.imap.once('ready', () => {
         this.imap.openBox('INBOX', true, (err, box) => {
           if(err) reject(err)
           else resolve(box)
         });
       });
-
       this.imap.once('error', (err) => {
         reject(err);
       });

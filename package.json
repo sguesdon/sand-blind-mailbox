@@ -98,7 +98,6 @@
   },
   "dependencies": {
     "electron-store": "5.2.0",
-    "emailjs-imap-client": "3.1.0",
     "imap": "0.8.19"
   }
 }

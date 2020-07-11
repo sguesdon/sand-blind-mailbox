@@ -2,18 +2,27 @@
   "CONTROLS": {
     "BACK": "BACK"
   },
+  "FORM": {
+    "REQUIRED": "is required",
+    "YES": "Yes",
+    "NO": "No"
+  },
   "PAGES": {
-
-
 
     "HOME": {
       "TITLE": "App works !",
       "GO_TO_DETAIL": "Go to Detail"
     },
+
+    "EMAILS": {
+      "TITLE": "Emails"
+    },
+
     "DETAIL": {
       "TITLE": "Detail page !",
       "BACK_TO_HOME": "Back to Home"
     },
+
     "CONFIG": {
 
       "TITLE": "Settings",
@@ -23,8 +32,30 @@
         "SIZE": "Size"
       },
 
-      "IMAP": {
-        "TITLE": "Imap"
+      "MAIL": {
+        "TITLE": "Imap",
+        "FORM": {
+            "HOST": {
+              "FIELDNAME": "Host",
+              "PLACEHOLDER": "Imap host"
+            },
+            "PORT": {
+              "FIELDNAME": "Port",
+              "PLACEHOLDER": "Imap port"
+            },
+            "TLS": {
+              "FIELDNAME": "TLS",
+              "PLACEHOLDER": "Use tls"
+            },
+            "USER": {
+              "FIELDNAME": "Login",
+              "PLACEHOLDER": "Imap login"
+            },
+            "PASSWORD": {
+              "FIELDNAME": "Password",
+              "PLACEHOLDER": "Imap password"
+            }
+        }
       },
 
       "COLORS": {
